@@ -23,7 +23,7 @@
                                     <img class="img-fluid" src="@if($post->image) {{Storage::url($post->image->url)}} @else https://w.wallhaven.cc/full/4v/wallhaven-4v1exm.png @endif" alt="">
                                 </a>
                             </div>
-                            <h3 class="post-title"><a href="{{route('posts.show', $post)}}"> {{$post->name}} </a></h3>
+                            <h3 class="post-title @if ($loop->first) centrado @endif"><a href="{{route('posts.show', $post)}}"> {{$post->name}} </a></h3>
                             <div class="post-meta">
                                 <ul>
                                     <li>
@@ -60,6 +60,7 @@
                     @for ($i = 1 ; $i < $posts->lastPage() ; $i++)
                         <li class="page-item"><a class="page-link" href=" {{$posts->url($i)}} ">{{$i}}</a></li>
                     @endfor
+                    <li class="page-item"><a class="page-link" href=" {{$posts->nextPageUrl()}} ">Siguiente</a></li>
                 </ul>
             </nav>
         </div>

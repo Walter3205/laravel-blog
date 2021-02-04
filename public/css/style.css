@@ -306,6 +306,10 @@ input[type="tel"]:focus {
   text-align: center;
 }
 
+.centrado {
+  text-align: center;
+}
+
 .page-title .block h1 {
   color: #fff;
   font-weight: 200;
