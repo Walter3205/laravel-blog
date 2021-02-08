@@ -3,7 +3,7 @@
 @section('title', 'Blog')
 
 @section('content_header')
-    <h1>Blog</h1>
+    
 @stop
 
 @section('content')
@@ -23,7 +23,7 @@
                                     <img class="img-fluid" src="@if($post->image) {{Storage::url($post->image->url)}} @else https://w.wallhaven.cc/full/4v/wallhaven-4v1exm.png @endif" alt="">
                                 </a>
                             </div>
-                            <h3 class="post-title @if ($loop->first) centrado @endif"><a href="{{route('posts.show', $post)}}"> {{$post->name}} </a></h3>
+                            <h3 class="post-title"><a href="{{route('posts.show', $post)}}"> {{$post->name}} </a></h3>
                             <div class="post-meta">
                                 <ul>
                                     <li>
